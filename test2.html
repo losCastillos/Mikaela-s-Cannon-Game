@@ -46,6 +46,9 @@
                 element.style.left = x + "px";
                 element.style.top = y + "px";
 
+                console.log("left: " + x + "px")
+                console.log("top: " + y + "px")
+
                 if (progress < 1 && element.style.top < 800) {
                 requestAnimationFrame(animate);
                 }
