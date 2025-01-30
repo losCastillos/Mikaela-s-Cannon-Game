@@ -22,7 +22,9 @@
         console.log("launch angle: " + launchAngle);
         console.log("Force: " + launchForce);
         console.log("Initial velocity: " + v);
-        function moveElementAlongParabola(element) {
+        function moveElementAlongParabola(elementID) {
+
+            const element = document.getElementById(elementID);
             let startTime = null;
             
             function animate(currentTime) {
@@ -35,8 +37,8 @@
                 const xCoor = v * Math.cos(launchAngle) * elapsedTime;
                 console.log("(" + xCoor + "," + yCoor + ")");
 
-                element.style.left = ($(element).getBoundingRectangle().left + xCoor) + "px";
-                element.style.top = ($(element).getBoundingRectangle().top - yCoor) + "px";
+                element.style.left = element.getBoundingRectangle().left + xCoor) + "px";
+                element.style.top = (element.getBoundingRectangle().top - yCoor) + "px";
 
                 console.log("left ^: " + xCoor + "px")
                 console.log("top ^: " + yCoor + "px")
@@ -53,8 +55,7 @@
 
         // Example usage:
         $(document).ready(function(){
-            const element = document.getElementById("testDiv");
-            moveElementAlongParabola(element); // 2 seconds duration
+            moveElementAlongParabola("testDiv"); // 2 seconds duration
         });
 
 
