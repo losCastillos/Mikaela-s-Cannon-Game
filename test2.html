@@ -23,8 +23,9 @@
         console.log("Force: " + launchForce);
         console.log("Initial velocity: " + v);
         function moveElementAlongParabola(elementID) {
-
-            const element = document.getElementById(elementID);
+            let element = document.getElementById(elementID);
+            const startX = element.getBoundingClientRect().left;
+            const startY = element.getBoundingClientRect().top;
             let startTime = null;
             
             function animate(currentTime) {
@@ -37,8 +38,8 @@
                 const xCoor = v * Math.cos(launchAngle) * elapsedTime;
                 console.log("(" + xCoor + "," + yCoor + ")");
 
-                element.style.left = (element.offsetLeft + xCoor) + "px";
-                element.style.top = (element.offsetTop - yCoor) + "px";
+                element.style.left = (startX + xCoor) + "px";
+                element.style.top = (startY - yCoor) + "px";
 
                 console.log("left ^: " + xCoor + "px")
                 console.log("top ^: " + yCoor + "px")
