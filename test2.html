@@ -30,7 +30,7 @@
         }
         
 
-        function moveElementAlongParabola(element, startX, startY, endX, endY, duration) {
+        function moveElementAlongParabola(element, duration) {
             let startTime = null;
 
             function animate(currentTime) {
@@ -57,7 +57,7 @@
         // Example usage:
         $(document).ready(function(){
             const element = document.getElementById("testDiv");
-            moveElementAlongParabola(element, 0, 0, 300, 150, 2000); // 2 seconds duration
+            moveElementAlongParabola(element, 3000); // 2 seconds duration
         });
 
 
