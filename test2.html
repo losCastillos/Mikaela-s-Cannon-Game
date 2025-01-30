@@ -22,40 +22,35 @@
         console.log("launch angle: " + launchAngle);
         console.log("Force: " + launchForce);
         console.log("Initial velocity: " + v);
-         
-        for(duration = 0; yCoor >= 0; duration++){
-            yCoor = cannonHeight + (v * Math.sin(launchForce) * duration) - (.5 * gravity * duration * duration);
-            xCoor = v * Math.cos(launchAngle) * duration;
-            console.log("(" + xCoor + "," + yCoor + ")");
-        }
-        
-
         function moveElementAlongParabola(element, duration) {
             let startTime = null;
-
+            
             function animate(currentTime) {
                 if (startTime === null) startTime = currentTime;
-
+                
+                const progress = Math.min(elapsedTime / duration, 1) / 1000;
                 const elapsedTime = currentTime - startTime;
-                const progress = Math.min(elapsedTime / duration, 1)/1000;
 
-                // Calculate the parabolic path
-                const x = element.getBoundingClientRect().left + v * Math.cos(launchAngle)
-                const y = element.getBoundingClientRect().top + (0-(cannonHeight + (v * Math.sin(launchForce) * progress) - (.5 * gravity * progress * progress)));
 
-                element.style.left = x + "px";
-                element.style.top = y + "px";
+                yCoor = (v * Math.sin(launchForce) * progress) - (.5 * gravity * progress * progress);
+                xCoor = v * Math.cos(launchAngle) * progress;
+                console.log("(" + xCoor + "," + yCoor + ")");
 
-                console.log("left: " + x + "px")
-                console.log("top: " + y + "px")
+                element.style.left = element.style.left + xCoor;
+                element.style.top = element.style.top - yCoor;
+
+                console.log("left: " + xCoor + "px")
+                console.log("top: " + yCoor + "px")
 
                 if (progress < .001 && y < 800) {
-                requestAnimationFrame(animate);
+                    requestAnimationFrame(animate);
                 }
+
+
             }
 
             requestAnimationFrame(animate);
-            }
+        }
 
         // Example usage:
         $(document).ready(function(){
