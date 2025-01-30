@@ -22,18 +22,17 @@
         console.log("launch angle: " + launchAngle);
         console.log("Force: " + launchForce);
         console.log("Initial velocity: " + v);
-        function moveElementAlongParabola(element, duration) {
+        function moveElementAlongParabola(element) {
             let startTime = null;
             
             function animate(currentTime) {
                 if (startTime === null) startTime = currentTime;
-                
-                const progress = Math.min(elapsedTime / duration, 1) / 1000;
+
                 const elapsedTime = currentTime - startTime;
 
 
-                yCoor = (v * Math.sin(launchForce) * progress) - (.5 * gravity * progress * progress);
-                xCoor = v * Math.cos(launchAngle) * progress;
+                yCoor = (v * Math.sin(launchForce) * elapsedTime) - (.5 * gravity * elapsedTime * elapsedTime);
+                xCoor = v * Math.cos(launchAngle) * elapsedTime;
                 console.log("(" + xCoor + "," + yCoor + ")");
 
                 element.style.left = element.style.left + xCoor;
@@ -42,7 +41,7 @@
                 console.log("left: " + xCoor + "px")
                 console.log("top: " + yCoor + "px")
 
-                if (progress < .001 && y < 800) {
+                if ( element.style.top < 800) {
                     requestAnimationFrame(animate);
                 }
 
@@ -55,7 +54,7 @@
         // Example usage:
         $(document).ready(function(){
             const element = document.getElementById("testDiv");
-            moveElementAlongParabola(element, 15000); // 2 seconds duration
+            moveElementAlongParabola(element); // 2 seconds duration
         });
 
 
