@@ -30,7 +30,7 @@
             function animate(currentTime) {
                 if (startTime === null) startTime = currentTime;
 
-                const elapsedTime = currentTime - startTime;
+                const elapsedTime = (currentTime - startTime)/100;
 
 
                 const yCoor = (v * Math.sin(launchForce) * elapsedTime) - (.5 * gravity * elapsedTime * elapsedTime);
