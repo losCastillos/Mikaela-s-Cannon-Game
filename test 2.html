@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var theta = 45;
+        var cannonHeight = 30;
+        var launchForce = 20000;
+        var mass = 200;
+        var v = 0; //initial velocity
+        var gravity = 9.8; 
+        var duration = 0;
+
+        var yCoor = 0
+        var xCoor = 0;
+
+        var launchAngle = theta * (Math.PI/180);
+        v = launchForce/mass;
+
+        //yCoor = (xCoor * Math.tan(launchAngle)) - ((gravity * xCoor * xCoor)/((2 * v * v) * Math.cos(launchAngle) * Math.cos(launchAngle)));
+        console.log("launch angle: " + launchAngle);
+        console.log("Force: " + launchForce);
+        console.log("Initial velocity: " + v);
+         
+        for(duration = 0; yCoor >= 0; duration++){
+            yCoor = cannonHeight + (v * Math.sin(launchForce) * duration) - (.5 * gravity * duration * duration);
+            xCoor = v * Math.cos(launchAngle) * duration;
+            console.log("(" + xCoor + "," + yCoor + ")");
+        }
+        
+    </script>
+<title>Page Title</title>
+</head>
+<body>
+
+
+</body>
+</html>
