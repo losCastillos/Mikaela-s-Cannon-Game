@@ -34,7 +34,7 @@
                 const elapsedTime = (currentTime - startTime)/1000;
 
 
-                const yCoor = (v * Math.sin(launchForce) * elapsedTime) - (.5 * gravity * elapsedTime * elapsedTime);
+                const yCoor = (v * Math.sin(launchAngle) * elapsedTime) - (.5 * gravity * elapsedTime * elapsedTime);
                 const xCoor = v * Math.cos(launchAngle) * elapsedTime;
                 console.log("(" + xCoor + "," + yCoor + ")");
 
