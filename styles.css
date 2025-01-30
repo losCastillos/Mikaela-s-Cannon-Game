@@ -1,6 +1,8 @@
 body{
     width: 10000px;
     overflow-y: scroll;
+    background-image: url("seamless-repeating-pattern-forest_209002-166.avif");
+    background-repeat: repeat;
 }
 
 #testDiv{
