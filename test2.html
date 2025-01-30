@@ -29,6 +29,36 @@
             console.log("(" + xCoor + "," + yCoor + ")");
         }
         
+
+        function moveElementAlongParabola(element, startX, startY, endX, endY, duration) {
+            let startTime = null;
+
+            function animate(currentTime) {
+                if (startTime === null) startTime = currentTime;
+
+                const elapsedTime = currentTime - startTime;
+                const progress = Math.min(elapsedTime / duration, 1);
+
+                // Calculate the parabolic path
+                const x = startX + (endX - startX) * progress;
+                const y = startY + (endY - startY) * (-4 * progress * progress + 4 * progress);
+
+                element.style.left = x + "px";
+                element.style.top = y + "px";
+
+                if (progress < 1) {
+                requestAnimationFrame(animate);
+                }
+            }
+
+            requestAnimationFrame(animate);
+            }
+
+        // Example usage:
+        const element = document.getElementById("testDiv");
+        moveElementAlongParabola(element, 0, 0, 300, 150, 2000); // 2 seconds duration
+
+
     </script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
 <title>Page Title</title>
