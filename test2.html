@@ -35,8 +35,8 @@
                 const xCoor = v * Math.cos(launchAngle) * elapsedTime;
                 console.log("(" + xCoor + "," + yCoor + ")");
 
-                element.style.left = (element.getBoundingRectangle().left + xCoor) + "px";
-                element.style.top = (element.getBoundingRectangle().top - yCoor) + "px";
+                element.style.left = ($(element).getBoundingRectangle().left + xCoor) + "px";
+                element.style.top = ($(element).getBoundingRectangle().top - yCoor) + "px";
 
                 console.log("left ^: " + xCoor + "px")
                 console.log("top ^: " + yCoor + "px")
