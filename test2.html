@@ -55,8 +55,11 @@
             }
 
         // Example usage:
-        const element = document.getElementById("testDiv");
-        moveElementAlongParabola(element, 0, 0, 300, 150, 2000); // 2 seconds duration
+        $(document).ready(function(){
+            const element = document.getElementById("testDiv");
+            moveElementAlongParabola(element, 0, 0, 300, 150, 2000); // 2 seconds duration
+        });
+
 
 
     </script>
