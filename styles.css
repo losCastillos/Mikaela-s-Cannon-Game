@@ -1,5 +1,5 @@
 #testDiv{
-    position: relatives;
+    position: absolute;
     top: 500px;
     left: 100px;
     width: 100px;
