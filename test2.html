@@ -40,8 +40,8 @@
                 const progress = Math.min(elapsedTime / duration, 1);
 
                 // Calculate the parabolic path
-                const x = v * Math.cos(launchAngle)
-                const y = cannonHeight + (v * Math.sin(launchForce) * progress) - (.5 * gravity * progress * progress);
+                const x = element.getBoundingClientRect().left + v * Math.cos(launchAngle)
+                const y = element.getBoundingClientRect().top + cannonHeight + (v * Math.sin(launchForce) * progress) - (.5 * gravity * progress * progress);
 
                 if (progress < 1) {
                 requestAnimationFrame(animate);
