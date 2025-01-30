@@ -31,7 +31,7 @@
             function animate(currentTime) {
                 if (startTime === null) startTime = currentTime;
 
-                const elapsedTime = (currentTime - startTime)/500;
+                const elapsedTime = (currentTime - startTime)/200;
 
 
                 const yCoor = (v * Math.sin(launchAngle) * elapsedTime) - (.5 * gravity * elapsedTime * elapsedTime);
@@ -41,8 +41,8 @@
                 element.style.left = (startX + xCoor) + "px";
                 element.style.top = (startY - yCoor) + "px";
 
-                console.log("left ^: " + xCoor + "px")
-                console.log("top ^: " + yCoor + "px")
+                //console.log("left ^: " + xCoor + "px")
+                //console.log("top ^: " + yCoor + "px")
 
                 if ( yCoor >= 0) {
                     requestAnimationFrame(animate);
