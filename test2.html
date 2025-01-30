@@ -43,9 +43,6 @@
                 const x = v * Math.cos(launchAngle)
                 const y = cannonHeight + (v * Math.sin(launchForce) * progress) - (.5 * gravity * progress * progress);
 
-                element.style.left = x + "px";
-                element.style.top = y + "px";
-
                 if (progress < 1) {
                 requestAnimationFrame(animate);
                 }
