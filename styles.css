@@ -1,5 +1,7 @@
 html{
     overflow: scroll;
+    overflow-x: visible;
+    overflow-y: visible;
 }
 
 #testDiv{
