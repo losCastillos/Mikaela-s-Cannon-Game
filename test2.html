@@ -41,12 +41,12 @@
 
                 // Calculate the parabolic path
                 const x = element.getBoundingClientRect().left + v * Math.cos(launchAngle)
-                const y = element.getBoundingClientRect().top + cannonHeight + (v * Math.sin(launchForce) * progress) - (.5 * gravity * progress * progress);
+                const y = element.getBoundingClientRect().top + (0-(cannonHeight + (v * Math.sin(launchForce) * progress) - (.5 * gravity * progress * progress)));
 
                 element.style.left = x + "px";
                 element.style.top = y + "px";
 
-                if (progress < 1) {
+                if (progress < 1 && element.style.top < 800) {
                 requestAnimationFrame(animate);
                 }
             }
@@ -57,7 +57,7 @@
         // Example usage:
         $(document).ready(function(){
             const element = document.getElementById("testDiv");
-            moveElementAlongParabola(element, 3000); // 2 seconds duration
+            moveElementAlongParabola(element, 15000); // 2 seconds duration
         });
 
 
