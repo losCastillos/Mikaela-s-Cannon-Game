@@ -40,8 +40,8 @@
                 const progress = Math.min(elapsedTime / duration, 1);
 
                 // Calculate the parabolic path
-                const x = startX + (endX - startX) * progress;
-                const y = startY + (endY - startY) * (-4 * progress * progress + 4 * progress);
+                const x = v * Math.cos(launchAngle)
+                const y = cannonHeight + (v * Math.sin(launchForce) * progress) - (.5 * gravity * progress * progress);
 
                 element.style.left = x + "px";
                 element.style.top = y + "px";
@@ -59,6 +59,8 @@
             const element = document.getElementById("testDiv");
             moveElementAlongParabola(element, 0, 0, 300, 150, 2000); // 2 seconds duration
         });
+
+
 
 
 
