@@ -22,11 +22,12 @@ body{
     position: absolute;
     bottom: 0px;
     width: 100%;
-
+    overflow: hidden;
 }
 
 .pathImg{
-display: inline-block;
+display: inline;
+margin: 0px;
 }
 
 
