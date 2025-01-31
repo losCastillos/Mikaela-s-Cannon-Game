@@ -106,10 +106,7 @@
 
                 const imageData = ctx.getImageData(0,0,image.width,image.height);
 
-                var test = 0;
-                for(i = 0; i < imageData.data.length; i++){
-                    test = test + imageData.data[i];
-                }
+               
 
                 var totalPix = image.height * image.width;
                 var colorPixelCount = 0;
@@ -120,11 +117,11 @@
                         if(imageData[i + x] > 0){
                             coloredPixel = 1;
                         }
-                        
+                        if(coloredPixel == 1){
+                            colorPixelCount++
+                        }
                     }
-                    if(coloredPixel == 1){
-                        colorPixelCount++
-                    }
+                    
                     
                     x=x+4;
                 }
