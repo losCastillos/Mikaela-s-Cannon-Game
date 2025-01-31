@@ -51,8 +51,8 @@
                 window.scrollTo((xCoor - 300)/2,0);
                 }
 
-                if(yCoor < 20){
-
+                if(element.offsetTop < 20){
+                    $("#allContent").css("top",element.offsetTop * (-1) + 20)
                 }
                 //console.log("left ^: " + xCoor + "px")
                 //console.log("top ^: " + yCoor + "px")
