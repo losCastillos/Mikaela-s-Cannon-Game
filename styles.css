@@ -22,11 +22,12 @@ body{
     position: absolute;
     bottom: 0px;
     width: 100%;
+    white-space: nowrap;
+    overflow-x: hidden;
 }
 
 .pathImg{
-position: absolute;
-display: inline-block;
+display: inline;
 }
 
 
