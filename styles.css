@@ -3,6 +3,8 @@ body{
     overflow-y: scroll;
     background-image: url("seamless-repeating-pattern-forest_209002-166.avif");
     background-repeat: repeat;
+    margin: 0px;
+    padding: 0px;
 }
 
 .grassContainer {
