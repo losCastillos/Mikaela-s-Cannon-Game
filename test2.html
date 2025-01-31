@@ -76,10 +76,10 @@
 
         // Example usage:
         $(document).ready(function(){
-            moveElementAlongParabola("characterContainer"); // 2 seconds duration
+            $("body").css({"width": (viewportWidth * 5) + "px"});
             $("#candyBackground").css({"height": viewportHeight + "px", top: (-1 * .2 * viewportHeight) + "px"});
             $(".path").css({"height": (viewportHeight * .35) + "px"});
-            $("body").css({"width": (viewportWidth * 5) + "px"});
+            moveElementAlongParabola("characterContainer"); // 2 seconds duration
         });
 
 
