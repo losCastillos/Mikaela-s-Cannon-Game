@@ -1,20 +1,13 @@
 body{
     width: 10000px;
     overflow-y: scroll;
-    background-image: url("seamless-repeating-pattern-forest_209002-166.avif");
-    background-repeat: repeat;
+    background-image: url("stock-vector-seamless-repeating-cartoon-background.jpeg");
+    background-repeat: repeat-x;
     margin: 0px;
     padding: 0px;
 }
 
-.grassContainer {
-    background-image: url("seamless-texture-grass-texture-green-lawn-with-stones-illustration-of-a-nature-background-organic-grass-for-the-game-vector.jpg");
-    background-repeat: repeat-x;
-    position:fixed;
-    bottom:0px;
-    height: 300px;
-    width: 100%;
-}
+
 
 #testDiv{
     position: relative;
