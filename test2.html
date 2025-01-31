@@ -20,21 +20,24 @@
 
         var yCoor = 0
         var xCoor = 0;
-
-        var launchAngle = theta * (Math.PI/180);
+        
         v = launchForce/mass;
 
         //yCoor = (xCoor * Math.tan(launchAngle)) - ((gravity * xCoor * xCoor)/((2 * v * v) * Math.cos(launchAngle) * Math.cos(launchAngle)));
-        console.log("launch angle: " + launchAngle);
-        console.log("Force: " + launchForce);
-        console.log("Initial velocity: " + v);
+        
 
         
+
         function moveElementAlongParabola(elementID) {
             let element = document.getElementById(elementID);
             const startX = element.getBoundingClientRect().left;
             const startY = element.getBoundingClientRect().top;
             let startTime = null;
+            var launchAngle = theta * (Math.PI/180); 
+
+            console.log("launch angle: " + launchAngle);
+            console.log("Force: " + launchForce);
+            console.log("Initial velocity: " + v);
             
             function animate(currentTime) {
                 if (startTime === null) startTime = currentTime;
