@@ -85,12 +85,13 @@
             $("#candyBackground").css({"height": viewportHeight + "px", top: (-1 * .2 * viewportHeight) + "px", "width": (viewportWidth * 5) + "px"});
             $(".path").css({"height": (viewportHeight * .35) + "px", "width": (viewportWidth * 5) + "px"});
 
-            $("body").keypress(checkKey(this));
+            document.onkeypress = checkKey;
              // 2 seconds duration
         });
 
         function checkKey(e) {
-            var event = window.event ? window.event : e;
+
+            e = e || window.event;
             if(event.keyCode == 40){
                 adjustCannon("down");
             }
