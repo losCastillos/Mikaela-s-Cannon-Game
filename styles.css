@@ -12,8 +12,8 @@ body{
     background-repeat: repeat-x;
     position:fixed;
     bottom:0px;
-    left:50%;
     height: 300px;
+    width: 100%;
 }
 
 #testDiv{
