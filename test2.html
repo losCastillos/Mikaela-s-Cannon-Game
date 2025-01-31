@@ -21,7 +21,7 @@
         var yCoor = 0
         var xCoor = 0;
         
-        v = launchForce/mass;
+        
 
         //yCoor = (xCoor * Math.tan(launchAngle)) - ((gravity * xCoor * xCoor)/((2 * v * v) * Math.cos(launchAngle) * Math.cos(launchAngle)));
         
@@ -30,6 +30,7 @@
 
         function moveElementAlongParabola(elementID) {
             launched = 1;
+            v = launchForce/mass;
             let element = document.getElementById(elementID);
             const startX = element.getBoundingClientRect().left;
             const startY = element.getBoundingClientRect().top;
@@ -100,9 +101,29 @@
             image.src = "boy.png";
             image.addEventListener("load", () => {
                 
-                ctx.drawImage(image, 0, 0,53,100);
+                ctx.drawImage(image, 0, 0,image.width,image.height);
 
-                const imageData = ctx.getImageData(0,0,53,100);
+                const imageData = ctx.getImageData(0,0,image.width,img.height);
+
+                var totalPix = image.height * image.width;
+                var colorPixelCount = 0;
+                var x=0;
+                while(x < totalPix * 4){
+                    var coloredPixel = 0;
+                    for(i = 0; i< 4; i++){
+                        if(imageData[i + x] > 0){
+                            colorPixel = 1;
+                        }
+                        
+                    }
+                    if(coloredPixel == 1){
+                        colorPixelCount++
+                    }
+                    
+                    x=x+4;
+                }
+
+                mass = colorPixelCount;
             });
             
             
