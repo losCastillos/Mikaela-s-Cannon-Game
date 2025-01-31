@@ -47,8 +47,12 @@
 
                 $("#player").css("transform","rotate(31deg)");
 
-                if(xCoor > 400 ){
+                if(xCoor > 400){
                 window.scrollTo((xCoor - 300)/2,0);
+                }
+
+                if(yCoor < 20){
+
                 }
                 //console.log("left ^: " + xCoor + "px")
                 //console.log("top ^: " + yCoor + "px")
@@ -76,11 +80,10 @@
 
         // Example usage:
         $(document).ready(function(){
-            $("body").css({"width": (viewportWidth * 5) + "px", "height": (viewportHeight * 3) + "px"});
-            $("#candyBackground").css({"height": viewportHeight + "px", top: ((viewportHeight * .35) + (viewportHeight )) + "px", "width": (viewportWidth * 5) + "px"});
+            $("body").css({"width": (viewportWidth * 5) + "px"});
+            $("#candyBackground").css({"height": viewportHeight + "px", top: (-1 * .2 * viewportHeight) + "px", "width": (viewportWidth * 5) + "px"});
             $(".path").css({"height": (viewportHeight * .35) + "px", "width": (viewportWidth * 5) + "px"});
-
-            moveElementAlongParabola("characterContainer");
+            moveElementAlongParabola("characterContainer"); // 2 seconds duration
         });
 
 
@@ -92,21 +95,23 @@
 <title>Page Title</title>
 </head>
 <body>    
-    <div id="candyBackground"></div>
-    <div class="path">
-        <img class="pathImg" src="stonepath.png" />
-        <img class="pathImg" src="stonepath.png" />
-        <img class="pathImg" src="stonepath.png" />
-        <img class="pathImg" src="stonepath.png" />
-        <img class="pathImg" src="stonepath.png" />
-        <img class="pathImg" src="stonepath.png" />
-        <img class="pathImg" src="stonepath.png" />
-        <img class="pathImg" src="stonepath.png" />
-        <img class="pathImg" src="stonepath.png" />
-        <img class="pathImg" src="stonepath.png" />
-    </div>
-    <div id="characterContainer">
-        <img id="player" class="character" src="boy.png" />
+    <div id="allContent">
+        <div id="candyBackground"></div>
+        <div class="path">
+            <img class="pathImg" src="stonepath.png" />
+            <img class="pathImg" src="stonepath.png" />
+            <img class="pathImg" src="stonepath.png" />
+            <img class="pathImg" src="stonepath.png" />
+            <img class="pathImg" src="stonepath.png" />
+            <img class="pathImg" src="stonepath.png" />
+            <img class="pathImg" src="stonepath.png" />
+            <img class="pathImg" src="stonepath.png" />
+            <img class="pathImg" src="stonepath.png" />
+            <img class="pathImg" src="stonepath.png" />
+        </div>
+        <div id="characterContainer">
+            <img id="player" class="character" src="boy.png" />
+        </div>
     </div>
 </body>
 </html>

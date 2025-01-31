@@ -5,6 +5,10 @@ body{
     padding: 0px;
 }
 
+#allContent{
+    position: relative;
+}
+
 #candyBackground{
     background-image: url("stock-vector-seamless-repeating-cartoon-background.jpeg");
     background-repeat: repeat-x;
