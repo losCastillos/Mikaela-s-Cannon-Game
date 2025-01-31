@@ -3,6 +3,7 @@ body{
     overflow-y: scroll;
     background-image: url("stock-vector-seamless-repeating-cartoon-background.jpeg");
     background-repeat: repeat-x;
+    background-size: auto;
     margin: 0px;
     padding: 0px;
 }
