@@ -47,8 +47,8 @@
 
                 $("#player").css("transform","rotate(31deg)");
 
-                if(xCoor > 400 || element.offsetTop < 50){
-                window.scrollTo((xCoor - 300)/2, element.style.top- 50);
+                if(xCoor > 400 ){
+                window.scrollTo((xCoor - 300)/2,0);
                 }
                 //console.log("left ^: " + xCoor + "px")
                 //console.log("top ^: " + yCoor + "px")
@@ -76,9 +76,10 @@
 
         // Example usage:
         $(document).ready(function(){
-            $("body").css({"width": (viewportWidth * 5) + "px"});
+            $("body").css({"width": (viewportWidth * 5) + "px", "heigh": (viewportHeight * 3) + "px"});
             $("#candyBackground").css({"height": viewportHeight + "px", top: (-1 * .2 * viewportHeight) + "px", "width": (viewportWidth * 5) + "px"});
             $(".path").css({"height": (viewportHeight * .35) + "px", "width": (viewportWidth * 5) + "px"});
+            scrollTo(0,viewportHeight * 3);
             moveElementAlongParabola("characterContainer"); // 2 seconds duration
         });
 
