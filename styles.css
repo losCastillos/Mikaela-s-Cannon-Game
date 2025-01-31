@@ -22,7 +22,7 @@ body{
 }
 
 .path{
-    background-image: url("cake-bottom.png");
+    background-image: url("path.png");
     background-repeat: repeat-x;
     -webkit-transform: rotateX(30deg);
     transform: rotateX(30deg);
