@@ -44,3 +44,19 @@ margin: 0px;
 .character{
     height: 100px;
 }
+
+#cannonBarrel{
+    z-index: 100;
+    position: absolute;
+    width: 200px;
+    bottom: 50px;
+    left: 50px;
+}
+
+#cannonBase{
+    z-index: 200;
+    position: absolute;
+    width: 200px;
+    bottom: 50px;
+    left: 50px;
+}
