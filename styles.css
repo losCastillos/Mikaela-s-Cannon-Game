@@ -27,8 +27,8 @@ body{
 }
 
 .pathImg{
-position: relative;
 display: inline;
+height: 100%;
 }
 
 
