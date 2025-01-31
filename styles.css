@@ -15,17 +15,12 @@ body{
 
 }
 
-.pathContainer{
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-}
 
 .path{
     transform: rotateX(85deg);
+    position: absolute;
+    bottom: 0px;
     width: 100%;
-    position: relative;
-    top: -20px;
 }
 
 #pathImg{
