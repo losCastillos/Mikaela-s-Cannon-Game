@@ -1,6 +1,5 @@
 body{
-    width: 10000px;
-    overflow-y: scroll;
+    overflow-y: auto;
     
     margin: 0px;
     padding: 0px;
@@ -23,7 +22,7 @@ body{
     width: 100%;
 }
 
-#pathImg{
+.pathImg{
 position: absolute;
 }
 
