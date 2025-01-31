@@ -7,7 +7,7 @@
 
         var viewportHeight = window.visualViewport.height;
         var viewportWidth = window.visualViewport.width;
-
+        var launched = 0;
         var defaultTraj = 30;
 
         var theta = 21;
@@ -29,6 +29,7 @@
         
 
         function moveElementAlongParabola(elementID) {
+            launched = 1;
             let element = document.getElementById(elementID);
             const startX = element.getBoundingClientRect().left;
             const startY = element.getBoundingClientRect().top;
@@ -107,7 +108,12 @@ function checkKey(e) {
                 adjustCannon("up");
             }
             if(event.keyCode == 13){
-                fireCannon();
+                if(launched == 0){
+                fireCannon();}
+                else{
+                    $("#characterContainer").css({"left": 100, "bottom": 100});
+                    window.scrollTo(0,0);
+                }
             }
             if(event.keyCode == 32){
                 startPowerMeter();
