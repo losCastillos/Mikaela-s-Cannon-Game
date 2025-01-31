@@ -85,11 +85,12 @@
             $("#candyBackground").css({"height": viewportHeight + "px", top: (-1 * .2 * viewportHeight) + "px", "width": (viewportWidth * 5) + "px"});
             $(".path").css({"height": (viewportHeight * .35) + "px", "width": (viewportWidth * 5) + "px"});
 
-            document.onkeypress = checkKey;
              // 2 seconds duration
         });
 
-        function checkKey(e) {
+        document.onkeydown = checkKey;
+
+function checkKey(e) {
 
             e = e || window.event;
             if(event.keyCode == 40){
