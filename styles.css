@@ -1,11 +1,20 @@
 body{
     width: 10000px;
     overflow-y: scroll;
+    
+    margin: 0px;
+    padding: 0px;
+}
+
+#candyBackground{
     background-image: url("stock-vector-seamless-repeating-cartoon-background.jpeg");
     background-repeat: repeat-x;
     background-size: auto;
-    margin: 0px;
-    padding: 0px;
+    height: 700px;
+    position: absolute;
+    top: -300px;
+    width: 100%;
+
 }
 
 .path{

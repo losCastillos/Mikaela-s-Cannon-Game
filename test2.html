@@ -9,7 +9,7 @@
         var viewportWidth = window.visualViewport.width;
 
         var theta = 30;
-        var cannonHeight = 30;
+        var cannonOffsetY = viewportHeight - 30;
         var launchForce = 20000;
         var mass = 100;
         var v = 0; //initial velocity
@@ -88,6 +88,7 @@
 <title>Page Title</title>
 </head>
 <body>    
+    <div id="candyBackground"></div>
     <div id="characterContainer">
         <img id="player" class="character" src="boy.png" />
     </div>
