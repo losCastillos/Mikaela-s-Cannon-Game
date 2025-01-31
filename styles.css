@@ -8,9 +8,10 @@ body{
 .grass {
     background-image: url("seamless-texture-grass-texture-green-lawn-with-stones-illustration-of-a-nature-background-organic-grass-for-the-game-vector.jpg");
     background-repeat: repeat-x;
-    min-height: 300px;
-    position: absolute;
-    bottom: 0px;
+    position:fixed;
+    bottom:0px;
+    left:50%;
+    height: 300px;
 }
 
 #testDiv{
