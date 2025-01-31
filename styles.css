@@ -24,6 +24,7 @@ body{
 .path{
     background-image: url("path.png");
     background-repeat: repeat-x;
+    background-size: contain;
     -webkit-transform: rotateX(30deg);
     transform: rotateX(30deg);
     width: 100%;
