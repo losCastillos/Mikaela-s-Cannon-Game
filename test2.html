@@ -52,7 +52,7 @@
                 }
 
                 if(element.offsetTop < 20){
-                    $("#allContent").css("top",element.offsetTop * (-1) + 20)
+                    $("#allContent").css("top",element.offsetTop * (-1) - 20)
                 }
                 //console.log("left ^: " + xCoor + "px")
                 //console.log("top ^: " + yCoor + "px")
@@ -83,7 +83,7 @@
             $("body").css({"width": (viewportWidth * 5) + "px"});
             $("#allContent").css({"height": viewportHeight + "px", "width": (viewportWidth * 5) + "px"});
             $("#candyBackground").css({"height": viewportHeight + "px", top: (-1 * .2 * viewportHeight) + "px", "width": (viewportWidth * 5) + "px"});
-            $(".path").css({"min-height": (viewportHeight * .35) + "px"}).promise().done(function(){$(".path").css("background-image","url('stonepath.png'")});
+            $(".path").css({"height": (viewportHeight * .35) + "px", "width": (viewportWidth * 5) + "px"});
             moveElementAlongParabola("characterContainer"); // 2 seconds duration
         });
 
@@ -99,6 +99,16 @@
     <div id="allContent">
         <div id="candyBackground"></div>
         <div class="path">
+            <img class="pathImg" src="stonepath.png" />
+            <img class="pathImg" src="stonepath.png" />
+            <img class="pathImg" src="stonepath.png" />
+            <img class="pathImg" src="stonepath.png" />
+            <img class="pathImg" src="stonepath.png" />
+            <img class="pathImg" src="stonepath.png" />
+            <img class="pathImg" src="stonepath.png" />
+            <img class="pathImg" src="stonepath.png" />
+            <img class="pathImg" src="stonepath.png" />
+            <img class="pathImg" src="stonepath.png" />
         </div>
         <div id="characterContainer">
             <img id="player" class="character" src="boy.png" />
