@@ -22,7 +22,6 @@ body{
     position: absolute;
     bottom: 0px;
     width: 100%;
-    overflow-wrap: break-word;
 }
 
 .pathImg{
