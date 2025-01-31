@@ -10,7 +10,7 @@
 
         var theta = 60;
         var cannonOffsetY = viewportHeight - 30;
-        var launchForce = 30000;
+        var launchForce = 20000;
         var mass = 100;
         var v = 0; //initial velocity
         var gravity = 9.8; 
@@ -47,8 +47,8 @@
 
                 $("#player").css("transform","rotate(31deg)");
 
-                if(xCoor > 400){
-                window.scrollTo((xCoor - 300)/2, yCoor- 500);
+                if(xCoor > 400 || element.offsetTop < -500){
+                window.scrollTo((xCoor - 300)/2, element.style.top- 200);
                 }
                 //console.log("left ^: " + xCoor + "px")
                 //console.log("top ^: " + yCoor + "px")
