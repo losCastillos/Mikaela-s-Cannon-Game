@@ -36,7 +36,7 @@ margin: 0px;
 #characterContainer{
     position: absolute;
     bottom: 100px;
-    left: 100px;
+    left: 80px;
     width: 100px;
     min-height: 100px;
 }
