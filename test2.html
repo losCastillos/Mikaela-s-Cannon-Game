@@ -8,7 +8,9 @@
         var viewportHeight = window.visualViewport.height;
         var viewportWidth = window.visualViewport.width;
 
-        var theta = 60;
+        var defaultTraj = 30;
+
+        var theta = 20;
         var cannonOffsetY = viewportHeight - 30;
         var launchForce = 20000;
         var mass = 100;
@@ -112,13 +114,17 @@ function checkKey(e) {
             var currentTraj = getCurrentRotation(cannon);
             if(direction == "up"){
                 $(cannon).css({
-                                '-webkit-transform':'rotate('+ (currentTraj + 1) + 'deg)', 
-                                '-moz-transform':'rotate('+ (currentTraj + 1) +'deg)',
-                                'transform':'rotate('+ (currentTraj + 1) +'deg)'
+                                '-webkit-transform':'rotate('+ (currentTraj - 1) + 'deg)', 
+                                '-moz-transform':'rotate('+ (currentTraj - 1) +'deg)',
+                                'transform':'rotate('+ (currentTraj - 1) +'deg)'
                             });
             }
             else{
-
+                $(cannon).css({
+                                '-webkit-transform':'rotate('+ (currentTraj +1) + 'deg)', 
+                                '-moz-transform':'rotate('+ (currentTraj + 1) +'deg)',
+                                'transform':'rotate('+ (currentTraj + 1) +'deg)'
+                            });
             }
         }
 
