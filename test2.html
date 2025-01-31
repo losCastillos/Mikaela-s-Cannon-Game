@@ -109,6 +109,7 @@ function checkKey(e) {
 
         function adjustCannon(direction){
             let cannon = document.getElementById("cannonBarrel");
+            var currentTraj = $(cannon).css("transform");
             if(direction == "up"){
                 $(cannon).css({
                                 '-webkit-transform':'rotate('+1+'deg)', 
