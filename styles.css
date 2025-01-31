@@ -8,9 +8,14 @@ body{
     padding: 0px;
 }
 
+.path{
+    background-image: url("IMG_4902.PNG");
+    background-repeat: repeat-x;
+    transform: rotateX('30deg');
+}
 
 
-#testDiv{
+#characterContainer{
     position: relative;
     top: 500px;
     left: 100px;
