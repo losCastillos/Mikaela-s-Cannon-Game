@@ -16,11 +16,10 @@ body{
 }
 
 .path{
-    background-image: url("IMG_4902.PNG");
+    background-image: url("cake-bottom.png");
     background-repeat: repeat-x;
-    transform: rotateX('30deg');
+    transform: rotateX(30deg);
     width: 100%;
-    height: 20%;
     position: absolute;
     bottom: 0px;
 }
