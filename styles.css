@@ -29,8 +29,8 @@ position: absolute;
 
 
 #characterContainer{
-    position: relative;
-    top: 500px;
+    position: absolute;
+    bottom: 100px;
     left: 100px;
     width: 100px;
     min-height: 100px;
