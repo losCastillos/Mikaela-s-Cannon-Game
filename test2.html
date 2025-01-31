@@ -87,8 +87,24 @@
             moveElementAlongParabola("characterContainer"); // 2 seconds duration
         });
 
+        function checkKey(e) {
+            var event = window.event ? window.event : e;
+            if(event.keyCode == 40){
+                adjustCannon("down");
+            }
+            if(event.keyCode == 38){
+                adjustCannon("up");
+            }
+        }
 
+        function adjustCannon(direction){
+            if(direction == up){
 
+            }
+            else{
+                
+            }
+        }
 
 
     </script>
@@ -106,6 +122,10 @@
         </div>
         <div id="characterContainer">
             <img id="player" class="character" src="boy.png" />
+        </div>
+        <div>
+            <img id="cannonBarrel" src="cannon_barrel.png">
+            <img id="cannonBase" src="cannon_base.png">
         </div>
     </div>
 </body>
