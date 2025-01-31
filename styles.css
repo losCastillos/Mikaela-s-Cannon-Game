@@ -5,7 +5,7 @@ body{
     background-repeat: repeat;
 }
 
-.grass {
+.grassContainer {
     background-image: url("seamless-texture-grass-texture-green-lawn-with-stones-illustration-of-a-nature-background-organic-grass-for-the-game-vector.jpg");
     background-repeat: repeat-x;
     position:fixed;
