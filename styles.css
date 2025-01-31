@@ -22,15 +22,10 @@ body{
 }
 
 .path{
-    background-image: url("path.png");
-    background-repeat: repeat-x;
-    background-size: contain;
-    -webkit-transform: rotateX(30deg);
-    transform: rotateX(30deg);
+    transform: rotateX(85deg);
     width: 100%;
-    position: absolute;
-    border: 1px solid black;
-
+    position: relative;
+    top: -20px;
 }
 
 #pathImg{
