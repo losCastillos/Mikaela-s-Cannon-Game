@@ -12,6 +12,8 @@ body{
     background-image: url("IMG_4902.PNG");
     background-repeat: repeat-x;
     transform: rotateX('30deg');
+    width: 100%;
+    height: 300px;
 }
 
 
