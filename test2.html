@@ -78,7 +78,7 @@
         $(document).ready(function(){
             $("body").css({"width": (viewportWidth * 5) + "px"});
             $("#candyBackground").css({"height": viewportHeight + "px", top: (-1 * .2 * viewportHeight) + "px", "width": (viewportWidth * 5) + "px"});
-            $(".path").css({"height": (viewportHeight * .35) + "px"});
+            $(".path").css({"height": (viewportHeight * .35) + "px", "width": (viewportWidth * 5) + "px"});
             moveElementAlongParabola("characterContainer"); // 2 seconds duration
         });
 
@@ -93,6 +93,11 @@
 <body>    
     <div id="candyBackground"></div>
     <div class="path">
+        <img class="pathImg" src="stonepath.png" />
+        <img class="pathImg" src="stonepath.png" />
+        <img class="pathImg" src="stonepath.png" />
+        <img class="pathImg" src="stonepath.png" />
+        <img class="pathImg" src="stonepath.png" />
         <img class="pathImg" src="stonepath.png" />
         <img class="pathImg" src="stonepath.png" />
         <img class="pathImg" src="stonepath.png" />

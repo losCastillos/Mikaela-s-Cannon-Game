@@ -9,7 +9,7 @@ body{
     background-image: url("stock-vector-seamless-repeating-cartoon-background.jpeg");
     background-repeat: repeat-x;
     position: absolute;
-
+    background-size: contain;
 }
 
 
