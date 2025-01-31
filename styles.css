@@ -51,6 +51,7 @@ margin: 0px;
     width: 200px;
     bottom: 50px;
     left: 50px;
+    transform: rotate(0);
 }
 
 #cannonBase{
