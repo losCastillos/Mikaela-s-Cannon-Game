@@ -23,11 +23,11 @@ body{
     bottom: 0px;
     width: 100%;
 overflow-x: hidden;
-white-space: nowrap;
+
 }
 
 .pathImg{
-display: inline;
+display: inline-block;
 }
 
 
