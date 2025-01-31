@@ -84,7 +84,7 @@
             $("#allContent").css({"height": viewportHeight + "px", "width": (viewportWidth * 5) + "px"});
             $("#candyBackground").css({"height": viewportHeight + "px", top: (-1 * .2 * viewportHeight) + "px", "width": (viewportWidth * 5) + "px"});
             $(".path").css({"height": (viewportHeight * .35) + "px", "width": (viewportWidth * 5) + "px"});
-            moveElementAlongParabola("characterContainer"); // 2 seconds duration
+             // 2 seconds duration
         });
 
         function checkKey(e) {
@@ -95,17 +95,32 @@
             if(event.keyCode == 38){
                 adjustCannon("up");
             }
+            if(event.keyCode == 13){
+                fireCannon();
+            }
+            if(event.keyCode == 32){
+                startPowerMeter();
+            }
         }
 
         function adjustCannon(direction){
+            let cannon = document.getElementById("cannonBarrel");
             if(direction == up){
-
+                $(cannon).css({
+                                '-webkit-transform':'rotate('+1+'deg)', 
+                                '-moz-transform':'rotate('+1+'deg)',
+                                'transform':'rotate('+1+'deg)'
+                            });
             }
             else{
-                
+
             }
         }
 
+        function fireCannon(){
+            moveElementAlongParabola("characterContainer");
+
+        }
 
     </script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
