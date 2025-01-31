@@ -33,6 +33,10 @@ body{
 
 }
 
+#pathImg{
+position: absolute;
+}
+
 
 #characterContainer{
     position: relative;
