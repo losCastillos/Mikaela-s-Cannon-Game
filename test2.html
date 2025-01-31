@@ -10,7 +10,7 @@
 
         var defaultTraj = 30;
 
-        var theta = 20;
+        var theta = 21;
         var cannonOffsetY = viewportHeight - 30;
         var launchForce = 20000;
         var mass = 100;
@@ -28,6 +28,8 @@
         console.log("launch angle: " + launchAngle);
         console.log("Force: " + launchForce);
         console.log("Initial velocity: " + v);
+
+        
         function moveElementAlongParabola(elementID) {
             let element = document.getElementById(elementID);
             const startX = element.getBoundingClientRect().left;
@@ -112,8 +114,8 @@ function checkKey(e) {
         function adjustCannon(direction){
             let cannon = document.getElementById("cannonBarrel");
             var currentTraj = getCurrentRotation(cannon);
-            if(currentTraj <= 21){launchAngle = 21 - currentTraj;}
-            if(currentTraj >= 291){launchAngle = 360 - currentTraj + 21;}
+            if(currentTraj <= 21){theta = 21 - currentTraj;}
+            if(currentTraj >= 291){theta = 360 - currentTraj + 21;}
          
   
             if(direction == "up"){
@@ -122,7 +124,7 @@ function checkKey(e) {
                                 '-moz-transform':'rotate('+ (currentTraj - 1) +'deg)',
                                 'transform':'rotate('+ (currentTraj - 1) +'deg)'
                             });
-                            launchAngle++;
+                            theta++;
             }
             else{
                 $(cannon).css({
@@ -130,14 +132,14 @@ function checkKey(e) {
                                 '-moz-transform':'rotate('+ (currentTraj + 1) +'deg)',
                                 'transform':'rotate('+ (currentTraj + 1) +'deg)'
                             });
-                            launchAngle--;
+                            theta--;
             }
 
             
         }
 
         function fireCannon(){
-            alert(launchAngle);
+            alert(theta);
             moveElementAlongParabola("characterContainer");
 
         }
