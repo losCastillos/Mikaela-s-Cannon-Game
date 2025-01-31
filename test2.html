@@ -112,9 +112,9 @@ function checkKey(e) {
             var currentTraj = getCurrentRotation(cannon);
             if(direction == "up"){
                 $(cannon).css({
-                                '-webkit-transform':'rotate('+1+'deg)', 
-                                '-moz-transform':'rotate('+1+'deg)',
-                                'transform':'rotate('+1+'deg)'
+                                '-webkit-transform':'rotate('+ currentTraj + 1 + 'deg)', 
+                                '-moz-transform':'rotate('+currentTraj + 1+'deg)',
+                                'transform':'rotate('+currentTraj + 1+'deg)'
                             });
             }
             else{
