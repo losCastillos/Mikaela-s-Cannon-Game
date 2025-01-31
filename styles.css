@@ -24,12 +24,10 @@ body{
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
+    background-image: url("stonepath.png");
+    background-repeat: repeat-x;
 }
 
-.pathImg{
-display: inline;
-height: 100%;
-}
 
 
 #characterContainer{
