@@ -15,14 +15,18 @@ body{
 
 }
 
+.pathContainer{
+    position: absolute;
+    bottom: 0px;
+}
+
 .path{
     background-image: url("cake-bottom.png");
     background-repeat: repeat-x;
     -webkit-transform: rotateX('30deg');
     transform: rotateX('30deg');
     width: 100%;
-    position: absolute;
-    bottom: 0px;
+    position: relative;
 }
 
 

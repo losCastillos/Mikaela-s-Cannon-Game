@@ -77,7 +77,7 @@
         // Example usage:
         $(document).ready(function(){
             moveElementAlongParabola("characterContainer"); // 2 seconds duration
-            $("#candyBackground").css({"height": viewportHeight + "px", top: (.2 * viewportHeight) + "px"});
+            $("#candyBackground").css({"height": viewportHeight + "px", top: (-1 * .2 * viewportHeight) + "px"});
             $(".path").css({"height": (viewportHeight * .2) + "px"});
         });
 
@@ -94,6 +94,9 @@
     <div id="characterContainer">
         <img id="player" class="character" src="boy.png" />
     </div>
-    <div class="path"></div>
+    <div class="pathContainer">
+        <div class="path"></div>
+    </div>
+    
 </body>
 </html>
