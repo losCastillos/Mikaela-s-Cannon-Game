@@ -88,12 +88,25 @@
 
         // Example usage:
         $(document).ready(function(){
+            window.scrollTo(0,0);
             $("body").css({"width": (viewportWidth * 5) + "px"});
             $("#allContent").css({"height": viewportHeight + "px", "width": (viewportWidth * 5) + "px"});
             $("#candyBackground").css({"height": viewportHeight + "px", top: (-1 * .2 * viewportHeight) + "px", "width": (viewportWidth * 5) + "px"});
             $(".path").css({"height": (viewportHeight * .35) + "px", "width": (viewportWidth * 5) + "px"});
 
-             // 2 seconds duration
+            const canvas = document.getElementById("characterCanvas");
+            const ctx = canvas.getContext("2d");
+            const image = new Image();
+            image.src = "boy.png";
+            image.addEventListener("load", () => {
+                
+                ctx.drawImage(image, 0, 0);
+
+                const imageData = ctx.getImageData(0,0);
+            });
+            
+            
+            
         });
 
         document.onkeydown = checkKey;
@@ -197,5 +210,6 @@ function checkKey(e) {
             <img id="cannonBase" src="cannon_base.png">
         </div>
     </div>
+    <canvas id="characterCanvas" style="display: none;" ></canvas>
 </body>
 </html>
