@@ -112,12 +112,17 @@ function checkKey(e) {
         function adjustCannon(direction){
             let cannon = document.getElementById("cannonBarrel");
             var currentTraj = getCurrentRotation(cannon);
+            if(currentTraj <= 21){launchAngle = 21 - currentTraj;}
+            if(currentTraj >= 291){launchAngle = 360 - currentTraj + 21;}
+         
+  
             if(direction == "up"){
                 $(cannon).css({
                                 '-webkit-transform':'rotate('+ (currentTraj - 1) + 'deg)', 
                                 '-moz-transform':'rotate('+ (currentTraj - 1) +'deg)',
                                 'transform':'rotate('+ (currentTraj - 1) +'deg)'
                             });
+                            launchAngle++;
             }
             else{
                 $(cannon).css({
@@ -125,10 +130,14 @@ function checkKey(e) {
                                 '-moz-transform':'rotate('+ (currentTraj + 1) +'deg)',
                                 'transform':'rotate('+ (currentTraj + 1) +'deg)'
                             });
+                            launchAngle--;
             }
+
+            
         }
 
         function fireCannon(){
+            alert(launchAngle);
             moveElementAlongParabola("characterContainer");
 
         }
