@@ -83,7 +83,7 @@
             $("body").css({"width": (viewportWidth * 5) + "px"});
             $("#allContent").css({"height": viewportHeight + "px", "width": (viewportWidth * 5) + "px"});
             $("#candyBackground").css({"height": viewportHeight + "px", top: (-1 * .2 * viewportHeight) + "px", "width": (viewportWidth * 5) + "px"});
-            $(".path").css({"height": (viewportHeight * .35) + "px"});
+            $(".path").css({"min-height": (viewportHeight * .35) + "px"}).promise().done(function(){$(".path").css("background-image","url('stonepath.png'")});
             moveElementAlongParabola("characterContainer"); // 2 seconds duration
         });
 
