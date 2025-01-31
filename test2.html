@@ -100,7 +100,8 @@
             const image = new Image();
             image.src = "boy.png";
             image.addEventListener("load", () => {
-                
+                canvas.height = image.height;
+                canvas.width = image.width;
                 ctx.drawImage(image, 0, 0,image.width,image.height);
 
                 const imageData = ctx.getImageData(0,0,image.width,image.height);
