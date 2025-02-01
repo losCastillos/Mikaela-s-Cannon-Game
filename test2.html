@@ -97,8 +97,8 @@
             
             calclulateMass(document.getElementById("player"));
 
-            $("#characterList tr td img").click(function(i){
-            calclulateMass(document.getElementById(this.id));
+            $("#characterList tr td img").click(function(){
+                calclulateMass(this);
             $("#player").attr("src",this.src);
         });
         });
