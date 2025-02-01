@@ -99,15 +99,14 @@
 
             $("#characterList tr td img").click(function(){
                 calclulateMass(this);
-            $("#player").attr("src",this.src);
-        });
+                $("#player").attr("src",this.src);
+            });
         });
 
         
 
         function calclulateMass(character){
-            var canvas = null;
-            canvas = document.getElementById("characterCanvas");
+            const canvas = document.getElementById("characterCanvas");
             var ctx = null;
             ctx = canvas.getContext("2d");
             var image = new Image();
@@ -134,7 +133,7 @@
                 const alpha = imageData.data[i + 3];
 
                 // Check if pixel is not transparent black
-                if (!(red === 0 && green === 0 && blue === 0 && alpha === 0)) {
+                if (!(red === 0 && green === 0 && blue === 0 && alpha === 0) && !(red === 255 && green === 255 && blue === 255)) {
                 count++;
                 }
             }
