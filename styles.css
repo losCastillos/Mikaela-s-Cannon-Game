@@ -73,6 +73,12 @@ margin: 0px;
     margin: auto, 0px;
 }
 
+#characterList td {
+    padding: 12px;
+    border: 2px solid silver;
+    background-color: aquamarine;
+}
+
 #characterList img {
     width: 100px;
 }
