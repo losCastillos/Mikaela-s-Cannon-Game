@@ -95,10 +95,14 @@
             $("#candyBackground").css({"height": viewportHeight + "px", top: (-1 * .2 * viewportHeight) + "px", "width": (viewportWidth * 5) + "px"});
             $(".path").css({"height": (viewportHeight * .35) + "px", "width": (viewportWidth * 5) + "px"});
             
+            calclulateMass($("#player"));
+        });
+
+        function calclulateMass(character){
             const canvas = document.getElementById("characterCanvas");
             const ctx = canvas.getContext("2d");
             var image = new Image();
-            image.src = "boy.png";
+            image.src = character.src;
             image.addEventListener("load", () => {
                 ctx.drawImage(image, 0, 0);
 
@@ -109,9 +113,7 @@
                 mass = ((100/imageData.height) * coloredPixels);
             
             });
-        });
-
-        
+        }
 
         function countColoredPixels(imageData) {
             let count = 0;
@@ -218,6 +220,35 @@ function checkKey(e) {
 </head>
 <body>    
     <div id="allContent">
+        <div id="characterList">
+            <table>
+                <tr>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                </tr>
+            </table>
+        </div>
         <canvas id="characterCanvas" ></canvas>
         <div id="candyBackground"></div>
         <div class="path">

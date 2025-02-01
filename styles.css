@@ -61,3 +61,12 @@ margin: 0px;
     bottom: 50px;
     left: 50px;
 }
+
+#characterList table {
+    border: none;
+    margin: auto, 0px;
+}
+
+#characterList img {
+    width: 100px;
+}
