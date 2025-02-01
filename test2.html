@@ -96,12 +96,14 @@
             $(".path").css({"height": (viewportHeight * .35) + "px", "width": (viewportWidth * 5) + "px"});
             
             calclulateMass(document.getElementById("player"));
-        });
 
-        $("#characterList").find("img").click(function(){
+            $("#characterList").find("img").click(function(){
             calclulateMass(document.getElementById(this.id));
             $("#player").attr("src",this.src);
         });
+        });
+
+        
 
         function calclulateMass(character){
             const canvas = document.getElementById("characterCanvas");
