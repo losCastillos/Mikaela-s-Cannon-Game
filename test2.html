@@ -106,7 +106,7 @@
         function calclulateMass(character){
 
             var canvas = document.createElement("canvas");
-            document.append(canvas);
+            document.getElementById("characterCanvas").replaceWith(canvas);
             var ctx = canvas.getContext("2d");
             ctx.reset();
             var image = new Image();
