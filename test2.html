@@ -104,8 +104,9 @@
         });
 
         function calclulateMass(character){
-            const canvas = document.getElementById("characterCanvas");
-            ctx = canvas.getContext("2d");
+
+            var canvas = document.createElement("canvas");
+            var ctx = canvas.getContext("2d");
             ctx.reset();
             var image = new Image();
             image.src = character.src;
@@ -113,31 +114,25 @@
                 ctx.drawImage(image, 0, 0);
 
                 const imageData = ctx.getImageData(0,0,image.width, image.height);
-                countColoredPixels(imageData);
+                let count = 0;
 
-                //adjust for 100px size image
-                
+                for (let i = 0; i < imageData.data.length; i += 4) {
+                    const red = imageData.data[i];
+                    const green = imageData.data[i + 1];
+                    const blue = imageData.data[i + 2];
+                    const alpha = imageData.data[i + 3];
+
+                    // Check if pixel is not transparent black
+                    if (!(red === 0 && green === 0 && blue === 0 && alpha === 0) && !(red === 255 && green === 255 && blue === 255)) {
+                    count++;
+                    }
+                }
+
+            mass = ((100/imageData.height) * count);
             
             });
         }
 
-        function countColoredPixels(imageData) {
-            let count = 0;
-
-            for (let i = 0; i < imageData.data.length; i += 4) {
-                const red = imageData.data[i];
-                const green = imageData.data[i + 1];
-                const blue = imageData.data[i + 2];
-                const alpha = imageData.data[i + 3];
-
-                // Check if pixel is not transparent black
-                if (!(red === 0 && green === 0 && blue === 0 && alpha === 0) && !(red === 255 && green === 255 && blue === 255)) {
-                count++;
-                }
-            }
-
-            mass = ((100/imageData.height) * count);
-            }
 
 
         document.onkeydown = checkKey;
