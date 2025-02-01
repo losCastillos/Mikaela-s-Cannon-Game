@@ -116,10 +116,10 @@
                 ctx.drawImage(image, 0, 0);
 
                 const imageData = ctx.getImageData(0,0,image.width, image.height);
-                var coloredPixels = countColoredPixels(imageData);
+                countColoredPixels(imageData);
 
                 //adjust for 100px size image
-                mass = ((100/imageData.height) * coloredPixels);
+                
             
             });
         }
@@ -139,7 +139,7 @@
                 }
             }
 
-            return count;
+            mass = ((100/imageData.height) * count);
             }
 
 
