@@ -103,12 +103,10 @@
             });
         });
 
-        
-
         function calclulateMass(character){
             const canvas = document.getElementById("characterCanvas");
-            var ctx = null;
             ctx = canvas.getContext("2d");
+            ctx.reset();
             var image = new Image();
             image.src = character.src;
             image.addEventListener("load", () => {
